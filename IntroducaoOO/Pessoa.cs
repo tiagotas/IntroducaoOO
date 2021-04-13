@@ -1,0 +1,58 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace IntroducaoOO
+{
+    //Especificação de como o "Objeto" será
+    // Classe abstrata não pode ter instância, serve como meio comum.
+    abstract class Pessoa
+    {
+        // Atributos/Propriedades (Caracteristicas)
+        public double altura;
+        public double peso;    // private ou sem nada, apenas dentro da própria classe
+        protected int idade;   // public é acessível por todos (dentro e fora da classe)
+        protected string nome; // protected é acessível apenas as Classes FILHAS
+
+
+        public string Nome
+        {
+            get { return nome; } // Define Nome como somente leitura, pois tem apenas o get.
+        }
+
+        public int Idade
+        {
+            get { return idade; }
+            set { idade = value; } // Define que é possívle gravar valores
+        }
+
+
+
+        // Método Construtor
+        public Pessoa(string _nome)
+        {
+            //Console.WriteLine("Chamou o método construtor assim que criou o objeto");
+
+            nome = _nome;
+        }
+
+
+        // Métodos (Ações)
+        public void Respirar()
+        {
+            // programar as ações.
+            Console.WriteLine("A pessoa {0} está respirando.", nome);
+        }
+
+        // Adicionando um método com Parâmetro
+        public void Comer(string _comida)
+        {
+            Console.WriteLine("A pessoa {0} está comendo {1}.", nome, _comida);
+        }
+
+        public void Andar()
+        {
+            Console.WriteLine("A pessoa {0} está andando", nome);
+        }
+    }
+}
