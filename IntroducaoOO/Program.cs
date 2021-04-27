@@ -29,6 +29,8 @@ namespace IntroducaoOO
             p1.Comer("Lasanha");
             p1.Andar();
             p1.Estudar("Desenvolvimento de Software");
+            Console.WriteLine("Instância da pessoa = {0} ", Aluno.Instancias);
+            Console.WriteLine("");
 
 
             Aluno p2 = new Aluno("Ana Clara");
@@ -36,6 +38,9 @@ namespace IntroducaoOO
             //p2.Comer("Pizza");
             //p2.Andar();
             p2.Estudar("Desenvolvimento de Software");
+            //Pessoa.Instancias = 1500;
+            Console.WriteLine("");
+
 
 
             Professor p3 = new Professor("Charlinho");
@@ -43,6 +48,9 @@ namespace IntroducaoOO
             p3.Andar();
             p3.Comer("Batata");
             p3.Ensinar("Desenvolvimento de Software");
+
+            Console.WriteLine("Instância da pessoa = {0} ", Pessoa.Instancias); // Esperado o número: 3
+            Console.WriteLine("");
 
 
 

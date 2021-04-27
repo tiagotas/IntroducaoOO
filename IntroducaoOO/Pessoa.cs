@@ -8,11 +8,22 @@ namespace IntroducaoOO
     // Classe abstrata não pode ter instância, serve como meio comum.
     abstract class Pessoa
     {
+        // atributo (campo)
+        private static int instancias = 0;
+
+
         // Atributos/Propriedades (Caracteristicas)
         public double altura;
         public double peso;    // private ou sem nada, apenas dentro da própria classe
         protected int idade;   // public é acessível por todos (dentro e fora da classe)
         protected string nome; // protected é acessível apenas as Classes FILHAS
+
+
+        // Propriedade (regula o acesso [leitura e escrita] aos campos/atributos)
+        public static int Instancias
+        {
+            get { return instancias; } // Define Instancias como somente leitura.
+        }
 
 
         public string Nome
@@ -34,6 +45,9 @@ namespace IntroducaoOO
             //Console.WriteLine("Chamou o método construtor assim que criou o objeto");
 
             nome = _nome;
+
+            // instancias++;
+            instancias = instancias + 1;
         }
 
 
